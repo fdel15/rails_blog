@@ -10,8 +10,18 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new
-    respond_with @post
+    @post = Post.create(post_params)
+    respond_with(@post)
+  end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit!
   end
 
 
