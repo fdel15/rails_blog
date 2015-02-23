@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  include PostsHelper
   respond_to :html, :json
 
   def index
