@@ -1,2 +1,4 @@
-<%= post.title %>
-<%= post.body %>
+<ul>
+  <li><%= link_to "#{post.title}", post_path("#{post.id}") %><br>
+<%= post.body %></li>
+</ul>
