@@ -1,21 +1,24 @@
-<%= form_for(@post) do |f| %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
 
-    <%= f.label :category %>
+<%= form_for(@post) do |f| %>
+  <div class="row">
+    <div class="small-12 columns">
+       <%= f.text_field :title, placeholder: "Title" %>
+    </div>
+  </div>
+<div class="row">
+  <div class="small-9 columns">
     <%= f.select(:category_id) do %>
       <% display_categories.each do |category| %>
         <%= content_tag(:option, category.name, value: category.id) %>
       <% end %>
     <% end %>
+  </div>
+  <div class="small-3 columns">
     <%= link_to 'New Category', new_category_url %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :body %>
     <%= f.text_area :body %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
