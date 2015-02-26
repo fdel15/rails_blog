@@ -15,3 +15,27 @@
  *= require foundation_and_overrides
 
  */
+
+ /******************************************
+    Posts/Index
+ *******************************************/
+
+ .post-preview {
+    list-style: none;
+ }
+
+ .post-title {
+  font-size: 1.5em;
+ }
+
+ .post-preview-date {
+  font-size: 0.65em;
+ }
+
+ .post-category {
+  font-size: 0.85em;
+ }
+
+ .post-category {
+  color: gray;
+ }
