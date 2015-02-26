@@ -2,5 +2,5 @@
   <li class="post-title"><%= link_to "#{post.title}", post_path("#{post.id}") %>
   <span class="post-preview-date"><%= post.post_date %></span></li>
   <li class="post-category">#<%= post.category.name %></li>
-  <li class= "post-preview-body"><%= post.body.first(500).strip %>...<%= link_to "read more", post_path("#{post.id}") %></li>
+  <li class= "post-preview-body"><%= simple_format post.body.first(500).strip %>...<%= link_to "read more", post_path("#{post.id}") %></li>
 </ul>
