@@ -14,10 +14,19 @@
 
   <body>
 
-    <% if display_sidebar? %>
-      <%= render "categories/sidebar" %>
-    <% end %>
-    <%= yield %>
-
+    <div class="row">
+        <%= render "layouts/top_nav_bar" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 column">
+        <%= yield %>
+      </div>
+      <div class="small-3 column">
+        <% if display_sidebar? %>
+          <%= render "categories/sidebar" %>
+        <% end %>
+      </div>
+    </div>
   </body>
 </html>
