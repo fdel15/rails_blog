@@ -1,0 +1,4 @@
+<p id="notice"><%= notice %></p>
+<% @category.posts.reverse.each do |post| %>
+  <%= render 'posts/preview', :post => post %>
+<% end %>

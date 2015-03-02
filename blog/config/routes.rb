@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :posts
 
   get 'categories/new' => 'categories#new', as: :new_category
+  get 'categories/:id' => 'categories#show', as: :category
   post 'categories' => 'categories#create'
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
