@@ -22,6 +22,14 @@
       <div class="small-8 column">
         <%= yield %>
       </div>
+      <div class="small-3 column">
+        <% if display_sidebar? %>
+          <ul class="side-nav">
+            <li><%= link_to "All Posts", root_url %></li>
+            <%= render "categories/names" %>
+          </ul>
+        <% end %>
+      </div>
     </div>
   </body>
 </html>
